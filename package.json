@@ -1,0 +1,23 @@
+{
+  "name": "node-worker",
+  "version": "1.0.0",
+  "description": "Test project for Node.js worker threads",
+  "main": "bin/src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravmahto/node-worker.git"
+  },
+  "author": "Gaurav Mahto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauravmahto/node-worker/issues"
+  },
+  "homepage": "https://github.com/gauravmahto/node-worker#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "12.0.10"
+  }
+}
