@@ -26,6 +26,12 @@
       ],
       "src/*": [
         "src/*"
+      ],
+      "libs": [
+        "src/libs"
+      ],
+      "libs/*": [
+        "src/libs/*"
       ]
     },
     "lib": [

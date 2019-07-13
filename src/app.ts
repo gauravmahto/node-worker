@@ -2,14 +2,18 @@
   * Copyright 2019 - Author gauravm.git@gmail.com
   */
 
-import { join } from 'path';
-import { Worker } from 'worker_threads';
+import './global';
 
-const log = console;
+import { join } from 'path';
+import { isMainThread, Worker } from 'worker_threads';
+
+import { createAppLogger } from 'libs/logger';
+
+const log = createAppLogger('app');
 
 function main(): void {
 
-  const worker = new Worker(join(__dirname, 'workers', 'test.js'), { workerData: 'test data' });
+  const worker = new Worker(join(__dirname, 'workers', 'do-task.js'), { workerData: 'test data' });
 
   worker.on('message', (msg) => {
     log.info(msg);
@@ -35,4 +39,8 @@ function main(): void {
 
 }
 
-main();
+if (isMainThread) {
+
+  main();
+
+}

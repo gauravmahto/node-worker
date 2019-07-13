@@ -127,7 +127,14 @@
     "max-classes-per-file": false,
     "interface-name": false,
     "forin": true,
-    "align": true,
+    "align": [
+      true,
+      "parameters",
+      "arguments",
+      "statements",
+      "members",
+      "elements"
+    ],
     "file-header": [
       true,
       "Copyright\\s{1}\\d{4}\\s{1}-\\s{1}Author\\s{1}gauravm\\.git@gmail\\.com"
@@ -140,10 +147,18 @@
       true,
       120
     ],
-    "indent": [
+    "ter-indent": [
       true,
-      "spaces",
-      2
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "ter-no-irregular-whitespace": [
+      true
+    ],
+    "no-multi-spaces": [
+      true
     ],
     "quotemark": [
       true,
@@ -233,7 +248,9 @@
       "allow-leading-underscore"
     ]
   },
-  "rulesDirectory": [],
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ],
   "linterOptions": {
     "exclude": [
       "dist/**/*",
